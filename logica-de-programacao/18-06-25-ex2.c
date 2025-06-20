@@ -1,3 +1,6 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
 int main() {
     
     printf("Exercicio 2: média entre 10 números\n");
