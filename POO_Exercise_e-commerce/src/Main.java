@@ -2,13 +2,14 @@ import java.util.UUID;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+class Main {
+    public static void main(String[] args) {
+        Address nathanAddress = new Address("99999-999", "SP", "São Paulo", "Rua da minha Rua", 50);
 
-    Address nathanAddress = new Address("99999-999", "SP", "São Paulo", "Rua da minha Rua", 50);
+        User nathan = new User("Nathan", "kiuzinoficial@gmail.com", "12345", nathanAddress, UserType.ADMIN);
 
-    User nathan = new User("Nathan", "kiuzinoficial@gmail.com", "12345", nathanAddress, UserType.ADMIN);
-
-
+        nathan.showDates();
+    }
 }
 
 enum UserType{
@@ -47,7 +48,7 @@ class User {
     }
 }
 
-class Address{
+class Address {
 
     String cep;
     String region;
@@ -56,7 +57,7 @@ class Address{
     int number;
     String complement;
 
-    public Address(String cep, String region, String city, String street, int number){
+    public Address(String cep, String region, String city, String street, int number) {
         this.cep = cep;
         this.region = region;
         this.city = city;
@@ -68,5 +69,4 @@ class Address{
     public String toString() {
         return street + "," + number + "-" + city + "," + region + "-" + complement + ", CEP:" + cep;
     }
-
 }
