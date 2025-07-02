@@ -8,7 +8,7 @@ class Main {
 
         User nathan = new User("Nathan", "kiuzinoficial@gmail.com", "12345", nathanAddress, UserType.ADMIN);
 
-        nathan.showDates();
+        nathan.showDatas();
     }
 }
 
@@ -39,7 +39,7 @@ class User {
         this.password = password;
     }
 
-    public void showDates() {
+    public void showDatas() {
         System.out.println("Usuário: " + name);
         System.out.println("ID: " + id);
         System.out.println("Email: " + email);
