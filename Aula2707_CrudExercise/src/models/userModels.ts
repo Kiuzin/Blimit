@@ -1,0 +1,11 @@
+import { UUID } from "crypto";
+
+export interface User{
+    id: UUID;
+    name: string;
+    email: string;
+    password: string;
+    deleted?: boolean;
+}
+
+export const users: User[] = [];
